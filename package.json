@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "consolidate": "^0.16.0",
     "express": "^4.17.1",
     "express-validator": "^6.7.0",
     "fetch": "^1.1.0",
@@ -19,6 +20,9 @@
     "mongoose": "^5.11.4",
     "node-fetch": "^3.1.0",
     "nodemon": "^2.0.6",
-    "pug": "^3.0.2"
+    "path": "^0.12.7",
+    "pug": "^3.0.2",
+    "swig": "^1.4.2",
+    "xmlhttprequest": "^1.8.0"
   }
 }
