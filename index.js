@@ -23,18 +23,15 @@ app.use(express(__dirname + '/views'))
 
   })
   
-  app.get('/submit-form-with-get', function(req,res){
-        const r = res.send(req.query);
-        const jsondata = JSON.stringify(req.query)
-        console.log(jsondata)
-   })
+  app.post('/api', function(req,res){
+      console.log(req);
+  })
 
 
 
 
 
 
-   
 const start = async () => {
     try {
         await mongoose.connect(`mongodb+srv://freefood:qwerty123456@freefood.q67co.mongodb.net/freefood?retryWrites=true&w=majority`)

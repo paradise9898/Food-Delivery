@@ -5,15 +5,15 @@ html(lang="en")
 
   body
 
-    form(action='/submit-form-with-get' method='get')
+    form(action='/api' method='post')
       input#fname(type='text' name='username')
       input#secname(type='text' name='password')
       input#sub(type='submit' name='')
 
 
 script.
-  Document.getElementById('fname').textContent = username;
-  Document.getElementById('secname').textContent = password;
+  Document.getElementById('username').textContent = username;
+  Document.getElementById('password').textContent = password;
   const data = {username, password};
   const options = {
   method: 'POST'
@@ -22,4 +22,4 @@ script.
   },
   body: JSON.stringify(data)
   };
-  fetch('/submit-form-with-get' , options)
+  fetch('/api' , options)
