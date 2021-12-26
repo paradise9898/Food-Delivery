@@ -6,9 +6,22 @@ html(lang="en")
   body
 
     form(action='/submit-form-with-get' method='get')
-      input(type='text' name='username')
-      input(type='text' name='password')
-      input(type='submit' name='')
+      input#fname(type='text' name='username')
+      input#secname(type='text' name='password')
+      input#sub(type='submit' name='')
 
-script(type='text/javascript').
-  console.log('fuck it')
+
+script.
+  Document.getElementById('fname').textContent = username;
+  Document.getElementById('secname').textContent = password;
+  const data = {username, password};
+  const options = {
+  method: 'POST'
+  headers: {
+  'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(data)
+  };
+  fetch('' , options)
+  console.log(fname)
+  console.log(secname)
