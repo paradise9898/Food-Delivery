@@ -1,7 +1,14 @@
-extends base.pug
+doctype html
+html(lang="en")
+  head
+    title= pageTitle
 
-block content
+  body
+
     form(action='/submit-form-with-get' method='get')
-        input(type='text', name='username')
-        input(type='text', name='password')
-        input(type='submit', name='')
+      input(type='text' name='username')
+      input(type='text' name='password')
+      input(type='submit' name='')
+
+script(type='text/javascript').
+  console.log('fuck it')

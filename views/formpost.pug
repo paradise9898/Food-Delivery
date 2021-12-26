@@ -1,7 +1,14 @@
-extends base.pug
+doctype html
+html(lang="en")
+  head
+    title= pageTitle
+    
+  body
 
-block content
-    form(action='/submit-form-with-post' method='post')
+   form(action='/submit-form-with-post' method='post')
         input(type='text', name='username')
         input(type='text', name='password')
         input(type='submit', name='')
+
+    script(type='text/javascript').
+      console.log('fuck it')
