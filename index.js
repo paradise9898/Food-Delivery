@@ -8,9 +8,10 @@ const app = express()
 app.use(express.json())
 app.use(express.json({extended: true}))
 app.use(express.urlencoded())
-app.use("/auth", authRouter)
 app.set('view engine', 'pug')
 app.use(express(__dirname + '/views'))
+
+app.use("/auth", authRouter)
 
 //routing
   app.get('/', function(req,res){
