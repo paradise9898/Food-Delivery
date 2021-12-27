@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-
   "scripts": {
     "start": "nodemon index.js"
   },
@@ -16,6 +15,7 @@
     "express": "^4.17.1",
     "express-validator": "^6.7.0",
     "fetch": "^1.1.0",
+    "https": "^1.0.0",
     "isomorphic-fetch": "^3.0.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.11.4",

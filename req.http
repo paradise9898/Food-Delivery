@@ -1,7 +1,7 @@
-POST                 http://localhost:9899/auth/registration
+POST   http://localhost:9899/auth/registration
 Content-Type: application/json
 
 {
-    "username": "sss",
-    "password": "12swww345"
+    "username": "sssssssssssssssssssssssssssssssssssss",
+    "password": "skalksdlkad"
 }
