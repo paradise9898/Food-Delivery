@@ -11,15 +11,3 @@ html(lang="en")
       input#sub(type='submit' name='')
 
 
-script.
-  Document.getElementById('username').textContent = username;
-  Document.getElementById('password').textContent = password;
-  const data = {username, password};
-  const options = {
-  method: 'POST'
-  headers: {
-  'Content-Type': 'application/json'
-  },
-  body: JSON.stringify(data)
-  };
-  fetch(' http://localhost:9899/auth/registration' , options)

@@ -25,8 +25,10 @@ app.use("/auth", authRouter)
   })
   
   app.post('/api', function(req,res){
-      const v = req.body
-      console.log(v);
+      const data  = JSON.stringify( req.body);
+
+      
+    console.log(data);
     
     
 
