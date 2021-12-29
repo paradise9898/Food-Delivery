@@ -16,12 +16,12 @@ app.use("/auth", authRouter)
 
 //routing
   app.get('/', function(req,res){
-    return res.redirect('/formget');
+    return res.redirect('/formpost');
     
   });
 
-  app.get('/formget', function(req,res){
-   return res.render('formget')
+  app.get('/formpost', function(req,res){
+   return res.render('formpost')
 
   })
   
@@ -33,12 +33,12 @@ app.use("/auth", authRouter)
       const  data = formData
 
       http.open(method, url,);
-      http.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+      http.setRequestHeader('Content-Type', 'application/json');
       http.onreadystatechange = function(){
         if (http.readyState === XMLHttpRequest.DONE && http.status === 201){
           console.log(JSON.parse(http.responseText));
         } else if (http.readyState === XMLHttpRequest.DONE && http.status !== 201){
-          console.log(res.error(http.responseText));
+          console.log('error');
         }
       }
 
