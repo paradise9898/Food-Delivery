@@ -3,7 +3,7 @@ const mongoose = require ('mongoose')
 const authRouter = require ('./authRouter')
 const PORT = process.env.PORT || 9899
 const app = express()
-const http = require('xmlhttprequest')
+const  XMLHttpRequest = require('xhr2');
 
 //encoding
 app.use(express.json())
@@ -27,11 +27,10 @@ app.use("/auth", authRouter)
   
   app.post('/api', function(req,res){
       const formData  = JSON.stringify( req.body);
-      console.log(data);
-      var http = new XMLHttpRequest();
-      var url = "http://localhost:9899/auth/registration"
-      var method = "POST";
-      var data = formData
+      const  http = new XMLHttpRequest();
+      const  url = "http://localhost:9899/auth/registration"
+      const  method = "POST";
+      const  data = formData
 
       http.open(method, url,);
       http.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -39,7 +38,7 @@ app.use("/auth", authRouter)
         if (http.readyState === XMLHttpRequest.DONE && http.status === 201){
           console.log(JSON.parse(http.responseText));
         } else if (http.readyState === XMLHttpRequest.DONE && http.status !== 201){
-          console.log('Error');
+          console.log(res.error(http.responseText));
         }
       }
 
