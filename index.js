@@ -28,6 +28,7 @@ app.use("/auth", authRouter)
   
   app.post('/api', function(req,res){
       const formData  = JSON.stringify( req.body);
+      console.log(formData);
       const  http = new XMLHttpRequest();
       const  url = "http://localhost:9899/auth/registration"
       const  method = "POST";
@@ -38,8 +39,6 @@ app.use("/auth", authRouter)
       http.onreadystatechange = function(){
         if (http.readyState === XMLHttpRequest.DONE && http.status === 201){
           console.log(JSON.parse(http.responseText));
-        } else if (http.readyState === XMLHttpRequest.DONE && http.status !== 201){
-          console.log('error');
         }
       }
 
