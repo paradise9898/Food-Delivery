@@ -44,6 +44,7 @@ app.use("/auth", authRouter)
 
       http.send(data);
 
+      return res.render('formpost')
 
 
   })

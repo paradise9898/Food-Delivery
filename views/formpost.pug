@@ -2,12 +2,29 @@ doctype html
 html(lang="en")
   head
     title= pageTitle
+    style 
+      include styles/style.css
 
+    script(src='/styles/style.js')
+      
   body
 
-    form(action='/api' method='post')
+.scene
+  .wrap
+    .wall.wall-right
+    .wall.wall-left
+    .wall.wall-top
+    .wall.wall-bottom
+    .wall.wall-back
+  .wrap
+    .wall.wall-right
+    .wall.wall-left
+    .wall.wall-top
+    .wall.wall-bottom
+    .wall.wall-back
+ 
+  form(action='/api' method='post')
       input#fname(type='text' name='username')
       input#secname(type='text' name='password')
       input#sub(type='submit' name='')
-
 
