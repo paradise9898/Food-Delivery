@@ -1,12 +1,14 @@
 const express = require ('express')
 const mongoose = require ('mongoose')
 const authRouter = require ('./authRouter')
+const path = require('path')
 const PORT = process.env.PORT || 9899
 const app = express()
 const  XMLHttpRequest = require('xhr2');
 const axios = require('axios')
 
 //encoding
+app.use('/static', express.static(path.join(__dirname, 'images')))
 app.use(express.json())
 app.use(express.json({extended: true}))
 app.use(express.urlencoded())
