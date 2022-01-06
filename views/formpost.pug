@@ -1,32 +1,141 @@
 doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible" content="IE=edge")
-        meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        title Document
-    body
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0,viewport-fit=cover')
+    title Food Website
+    link(rel='stylesheet' href='/index.css')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
 
-    form(action='/api' method='post')
-        input#fname(type='text' name='username')
-        input#secname(type='text' name='password')
-        input#sub(type='submit' name='')
+    body 
+    img(src='/public/foodie.png' alt='login' style='width:100px; height:100px;')
+    style 
+        include styles/style.css
 
-        script(type='text/javascript').
+    
+  body
+    // desktop view
+    #container.container
+      #menu
+        .title
+          img(src='/images/foodie hunter.png' alt='')
+        .menu-item
+          a(href='#') About
+          a(href='#') Services
+          a(href='#') Your Orders
+          a(href='#') Wishlists
+          a(href='#') Cart
+          a(href='#') Contact
+          a(href='#') Checkout
+      #food-container
+        #header
+          .add-box
+            i#add-address.fa.fa-map-marker.your-address  Your Address
+          .util
+            i.fa.fa-search  Search
+            i.fa.fa-tags  Offers
+            i#cart-plus.fa.fa-cart-plus  0 Items
+        #food-items.d-food-items
+          #biryani.d-biryani
+            p#category-name Biryani
+          #chicken.d-chicken
+            p#category-name Chicken Delicious
+          #paneer.d-paneer
+            p#category-name Paneer Mania
+          #vegetable.d-vegetable
+            p#category-name Pure Veg Dishes
+          #chinese.d-chinese
+            p#category-name Chinese Corner
+          #south-indian.d-south-indian
+            p#category-name South Indian
+        #cart-page.cart-toggle
+          p#cart-title Cart Items
+          p#m-total-amount Total Amout : 100
+          table
+            thead
+              tr
+                td Item
+                td Name
+                td Quantity
+                td Price
+            tbody#table-body
+          .btn-box
+            button.cart-btn Checkout
+      #cart
+        .taste-header
+          .user
+            i#circle.fa.fa-user-circle  Account
+        #category-list
+          p.item-menu Go For Hunt
+          .border
+        #checkout.cart-toggle
+          p#total-item Total Item : 5
+          p#total-price
+          p#delievery Free delievery on $ 40
+          button.cart-btn Checkout
+    // mobile view
+    #mobile-view.mobile-view
+      .mobile-top
+        .logo-box
+          img#logo(src='/images/foodielogo.png' alt='')
+          i#m-add-address.fa.fa-map-marker.your-address  Your Address
+        .top-menu
+          i.fa.fa-search
+          i.fa.fa-tag
+          i.fa.fa-heart-o
+          i#m-cart-plus.fa.fa-cart-plus  0
+      .item-container
+        #category-header.category-header
+        #food-items.food-items
+          #biryani.m-biryani
+            p#category-name Biryani
+          #chicken.m-chicken
+            p#category-name Chicken Delicious
+          #paneer.m-paneer
+            p#category-name Paneer Mania
+          #vegetable.m-vegetable
+            p#category-name Pure Veg Dishes
+          #chinese.m-chinese
+            p#category-name Chinese Corner
+          #south-indian.m-south-indian
+            p#category-name South Indian
+      .mobile-footer
+        p Home
+        p Cart
+        p offers
+        p orders
+    script(src='/index.js' type='module')
 
 
-script.
-    Document.getElementById('fname').textContent = username;
-    Document.getElementById('secname').textContent = password;
-    const data = {username, password};
-    const options = {
-    method: 'POST'
-    headers: {
-    'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-    };
-    fetch('' , options)
-    console.log(fname)
-    console.log(secname)
-    fetch('/api' , options)
+
+//-     form(action='/api' method='post')
+//-         input#fname(type='text' name='username')
+//-         input#secname(type='text' name='password')
+//-         input#sub(type='submit' name='')
+
+//-         script(type='text/javascript').
+
+
+//- script.
+//-     Document.getElementById('fname').textContent = username;
+//-     Document.getElementById('secname').textContent = password;
+//-     const data = {username, password};
+//-     const options = {
+//-     method: 'POST'
+//-     headers: {
+//-     'Content-Type': 'application/json'
+//-     },
+//-     body: JSON.stringify(data)
+//-     };
+//-     fetch('' , options)
+//-     console.log(fname)
+//-     console.log(secname)
+//-     fetch('/api' , options)
+
+
+
+
+
+
+

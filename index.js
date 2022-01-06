@@ -8,12 +8,12 @@ const  XMLHttpRequest = require('xhr2');
 const axios = require('axios')
 
 //encoding
-app.use('/static', express.static(path.join(__dirname, 'images')))
 app.use(express.json())
 app.use(express.json({extended: true}))
 app.use(express.urlencoded())
 app.set('view engine', 'pug')
-app.use(express(__dirname + '/views'))
+app.use("/public", express.static(path.join(__dirname, 'public')));
+
 
 app.use("/auth", authRouter)
 
