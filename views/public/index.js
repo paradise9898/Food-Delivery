@@ -1,4 +1,4 @@
-import {foodItem} from './fooditem'
+import {foodItem} from '../views/styles/fooditem'
 
 function displayItems(){
     var biryani= document.getElementById('biryani');

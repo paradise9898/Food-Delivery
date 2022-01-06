@@ -13,7 +13,7 @@ app.use(express.json({extended: true}))
 app.use(express.urlencoded())
 app.set('view engine', 'pug')
 app.use("/public", express.static(path.join(__dirname, 'public')));
-
+app.use(express(__dirname + '/views'))
 
 app.use("/auth", authRouter)
 
