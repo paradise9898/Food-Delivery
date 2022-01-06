@@ -1,11 +1,11 @@
 const express = require ('express')
 const mongoose = require ('mongoose')
-const authRouter = require ('./authRouter')
+const authRouter = require ('./controllers/authRouter')
 const path = require('path')
 const PORT = process.env.PORT || 9899
 const app = express()
 const  XMLHttpRequest = require('xhr2');
-const axios = require('axios')
+
 
 //encoding
 app.use(express.json())
