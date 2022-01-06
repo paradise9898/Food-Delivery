@@ -25,7 +25,7 @@ const foodItem= [
     category : 'biryani',
     rating : 4.3,
     price: 18,
-    img: 'images/biryani/egg-biryani.jpeg',
+    img: './public/images/biryani/egg-biryani.jpeg',
     quantity: 1
 },
 
