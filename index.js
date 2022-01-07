@@ -19,39 +19,46 @@ app.use("/auth", authRouter)
 
 //routing
   app.get('/', function(req,res){
-    return res.redirect('/formpost');
+    return res.redirect('/landing');
     
   });
 
-  app.get('/formpost', function(req,res){
-   return res.render('formpost')
+  app.get('/landing', function(req,res){
+   return res.render('landing')
 
   })
   
+  app.get('/auth', function(req,res){
+    return res.render('auth')
+ 
+   })
+
+
+  //MongoDB sepicifying users
   app.post('/api', function(req,res){
-      const formData  = JSON.stringify( req.body);
-      console.log(formData);
-      const  http = new XMLHttpRequest();
-      const  url = "http://localhost:9899/auth/registration"
-      const  method = "POST";
-      const  data = formData
+    const formData  = JSON.stringify( req.body);
+    console.log(formData);
+    const  http = new XMLHttpRequest();
+    const  url = "http://localhost:9899/auth/registration"
+    const  method = "POST";
+    const  data = formData
 
-      http.open(method, url,);
-      http.setRequestHeader('Content-Type', 'application/json');
-      http.onreadystatechange = function(){
-        if (http.readyState === XMLHttpRequest.DONE && http.status === 201){
-          console.log(JSON.parse(http.responseText));
-        }
+    http.open(method, url,);
+    http.setRequestHeader('Content-Type', 'application/json');
+    http.onreadystatechange = function(){
+      if (http.readyState === XMLHttpRequest.DONE && http.status === 201){
+        console.log(JSON.parse(http.responseText));
       }
+    }
 
-      http.send(data);
-
-      return res.render('formpost')
-
-
-  })
+    http.send(data);
 
 
+
+})
+
+
+  //Defining promise type
 
 const start = async () => {
     try {

@@ -48,8 +48,9 @@ html(lang='en')
       #cart
         .taste-header
           .user
-            i#circle.fa.fa-user-circle  Account
-            
+            a(href='/auth')
+              i#circle.fa.fa-user-circle  Account
+
         #category-list
           p.item-menu Go For Hunt
           .border
@@ -89,7 +90,7 @@ html(lang='en')
         p Cart
         p offers
         p orders
-    script(src='./public//index.js' type='module')
+    script(src='./public/index.js' type='module')
 
 
 

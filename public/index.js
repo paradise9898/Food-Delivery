@@ -1,5 +1,21 @@
 import {foodItem} from './fooditem.js'
 
+
+
+//add close and open code
+function openModal(){
+
+}
+
+
+function closenModal(){
+
+}
+
+
+
+
+
 function displayItems(){
     var biryani= document.getElementById('biryani');
     var paneer=  document.getElementById('paneer');;
