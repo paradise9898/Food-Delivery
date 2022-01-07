@@ -1,6 +1,7 @@
 doctype html
 html(lang='en')
-  head    
+  head
+    meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1.0,viewport-fit=cover')
     title Food Website
@@ -28,10 +29,11 @@ html(lang='en')
             i.fa.fa-search  Search
             i.fa.fa-tags  Offers
             i#cart-plus.fa.fa-cart-plus  0 Items
+            i.user Log In
+            
         #food-items.d-food-items
-          #biryani.d-biryani
-            p#category-name General food
-          
+          #chinese.d-chinese
+            p#category-name Chinese Corner
         #cart-page.cart-toggle
           p#cart-title Cart Items
           p#m-total-amount Total Amout : 100
@@ -48,7 +50,8 @@ html(lang='en')
       #cart
         .taste-header
           .user
-            i#circle.fa.fa-user-circle  Account
+            
+
         #category-list
           p.item-menu Go For Hunt
           .border
@@ -73,13 +76,22 @@ html(lang='en')
         #food-items.food-items
           #biryani.m-biryani
             p#category-name Biryani
-          
+          #chicken.m-chicken
+            p#category-name Chicken Delicious
+          #paneer.m-paneer
+            p#category-name Paneer Mania
+          #vegetable.m-vegetable
+            p#category-name Pure Veg Dishes
+          #chinese.m-chinese
+            p#category-name Chinese Corner
+          #south-indian.m-south-indian
+            p#category-name 
       .mobile-footer
         p Home
         p Cart
         p offers
         p orders
-    script(src='./public/index.js' type='module')
+    script(src='./public//index.js' type='module')
 
 
 
