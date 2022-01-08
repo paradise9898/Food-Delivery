@@ -39,7 +39,7 @@ app.use("/auth", authRouter)
     const formData  = JSON.stringify( req.body);
     console.log(formData);
     const  http = new XMLHttpRequest();
-    const  url = "http://0.0.0.0/auth/registration"
+    const  url = "https://freefood9.herokuapp.com/auth/registration"
     const  method = "POST";
     const  data = formData
 
