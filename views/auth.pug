@@ -3,22 +3,38 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
-    link(rel='stylesheet', href='./public/auth/index.css')
+    link(rel='stylesheet' href='./public/auth/index.css')
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Document
   body 
 
-  .login
-  .form
-    form.login-form(action='/api' method='post')
-      span.material-icons
-      img(src='./public/images/foodie hunter.png' alt='')
-      input#fname(type='text' name='username')
-      input#secname(type='text' name='password')
-      input#email(type='text' name='email')
-      button login
+section
+  .container
+    .user.signinBx
+      .imgBx
+        img(src='https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Login%20and%20Registration%20Form/img1.jpg' alt='')
+      .formBx
+        form(action='/api' method='post')
+          h2 Sign In
+          input#fname(type='text' name='username')
+          input#secname(type='text' name='password')
+          input(type='submit' name='' value='Login')
+          p.signup
+            | Don&apos;t have an account ?
+            a(href='#' onclick='toggleForm();') Sign Up.
+    .user.signupBx
+      .formBx
+        form(action='/api' method='post')
+          h2 Create an account
+          input#fname(type='text' name='username')
+          input#secname(type='text' name='password')
+          input(type='submit' name='' value='Sign Up')
+          p.signup
+            | Already have an account ?
+            a(href='#' onclick='toggleForm();') Sign in.
+      .imgBx
+        img(src='https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Login%20and%20Registration%20Form/img2.jpg' alt='')
 
-        script(type='text/javascript').
 
 
 script.
@@ -37,7 +53,7 @@ script.
   console.log(fname)
   console.log(secname)
   console.log(email)
-  
+
   fetch('/api' , options)
 
 
@@ -46,3 +62,11 @@ script.
 
 
 
+
+
+
+  //- <form action="/api" method="post">
+  //-       <img src="./public/images/foodie hunter.png" alt="">
+  //-       <input id="fname" type="text" name="username">
+  //-       <input id="secname" type="text" name="password">           
+  //-     </form>
