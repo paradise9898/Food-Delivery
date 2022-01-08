@@ -39,7 +39,7 @@ app.use("/auth", authRouter)
     const formData  = JSON.stringify( req.body);
     console.log(formData);
     const  http = new XMLHttpRequest();
-    const  url = "http://localhost:9899/auth/registration"
+    const  url = "/auth/registration"
     const  method = "POST";
     const  data = formData
 
