@@ -36,6 +36,7 @@ app.use("/auth", authRouter)
 
   //MongoDB sepicifying users
   app.post('/api', function(req,res){
+    
     const formData  = JSON.stringify( req.body);
     console.log(formData);
     const  http = new XMLHttpRequest();
@@ -52,10 +53,16 @@ app.use("/auth", authRouter)
     }
 
     http.send(data);
+    return res.redirect('/account')
 
 
 
 })
+
+app.get('/account', function(req,res){
+  return res.render('account')
+
+ })
 
 
   //Defining promise type
