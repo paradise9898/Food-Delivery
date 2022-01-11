@@ -6,7 +6,6 @@ const PORT = process.env.PORT || 9899
 const app = express()
 const  XMLHttpRequest = require('xhr2');
 
-
 //encoding
 app.use(express.json())
 app.use(express.json({extended: true}))
