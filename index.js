@@ -53,14 +53,29 @@ app.use("/auth", authRouter)
     }
 
     http.send(data);
-    return res.redirect('/account')
+    return res.redirect('/afterreg')
 
 
 
 })
 
-app.get('/account', function(req,res){
-  return res.render('account')
+app.get('/afterreg', function(req,res){
+  return res.render('afterreg')
+
+ })
+
+
+
+
+
+ app.get('/userprofile', function(req,res){
+  return res.render('userprofile')
+
+ })
+
+
+ app.get('/logout', function(req,res){
+  return res.render('loggedout')
 
  })
 
